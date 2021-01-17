@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Catamaran', sans-serif;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+body {
+
+  background: whitesmoke;
+}
+.mainCard {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+#search {
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  padding: 1px 5px;
+}
+
+.look button {
+  border: none;
+  background: transparent;
+  outline: none;
+  margin: 0 5px;
+}
+
+.look {
+  height: 35px;
+  background: #fff;
+  width: 90%;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  align-content: center;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.see-card {
+  max-height: 100%;
+  overflow-y: scroll;
+
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background: rgba(255, 255, 255, 1);
+
+  clip-path: inset(0% 100% 0% 0%);
+
+  transition: 0.5s ease-in-out;
+}
+
+
+
+.saw-card {
+  clip-path: inset(0% 0% 0% 0%);
+
+  transition: 0.5s ease-in-out;
+}
+
+
+.card-desc2 {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.card-desc2 p {
+  padding: 2px;
+}
+
+.div {
+  padding: 9px 6px;
+  background: white;
+  min-height: 55px;
+  width: 94%;
+  border-radius: 4px;
+  margin: 9px auto;
+  box-shadow: 0 0 4px rgba(10, 10, 10, 0.2);
+  position: relative;
+}
+
+.div span {
+  color: #999;
+  text-align: right;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  right: 9px;
+
+}
+
+.div p {
+
+  padding-bottom: 20px;
+  font-size: 22px;
+}
+
+.card {
+  width: 100%;
+
+}
+
+.mainButtons,
+.mainButtons2 {
+  width: 100%;
+  padding: 1px 16px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.mainButtons2 {
+  margin: 10px auto;
+}
+
+.mainButtons button,
+.close,
+.add {
+  height: 75px;
+  width: 75px;
+  border: 2px solid transparent;
+  background: transparent;
+  text-transform: uppercase;
+  outline: none;
+  font-size: 18px;
+}
+
+.add {
+  clip-path: inset(100% 0% 0% 0%);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  outline: none;
+}
+
+.img-card,
+.img-card2 {
+  width: 90%;
+  height: 300px;
+  margin: 5px auto;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(10, 10, 10, 0.2);
+}
+
+.look button img {
+  height: 25px;
+  width: 25px;
+}
+
+nav img {
+  width: 35px;
+  height: 35px;
+}
+
+nav {
+  padding: 9px 11px;
+  align-items: center;
+  height: 40px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border-radius: 6px;
+}
+
+nav div span {
+  font-size: 25px;
+}
+
+nav div {
+  display: flex;
+
+  align-items: center;
+}
+
+header {
+  height: 70px;
+  position: relative;
+  background: limegreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.article {
+  height: 100%;
+  background: #eee;
+  width: 95%;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0 auto;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+
+  min-height: 90%;
+  grid-gap: 10px;
+  justify-items: start;
+  margin-bottom: 60px;
+}
+
+
+.options {
+  transform: rotate(0deg);
+  transition: 0.6s ease-in-out;
+
+}
+
+.nomination {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  overflow-y: scroll;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px;
+  z-index: 20;
+  background: white;
+  clip-path: inset(0% 0% 0% 100%);
+  transition: 0.5s;
+
+}
+
+.nominationed {
+  clip-path: inset(0% 0% 0% 0%);
+  transition: 0.6s;
+}
+
+.sub {
+  padding: 9px 0px;
+  width: 90%;
+  margin: 35px auto;
+  background: limegreen;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 30px;
+  font-size: 21px;
+  color: white;
+}
+
+.nomination h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+.coverI {
+  width: 50%;
+  height: 50%;
+  max-height: 90px;
+  object-fit: cover;
+
+}
+
+.cover {
+  display: grid;
+  grid-template-columns: 4fr 6fr 1fr;
+  align-content: center;
+}
+
+.nameI {
+  width: 100px;
+  height: 100px;
+  max-height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 2px 1px rgba(0, 0, 0, 0.1))
+}
+
+.cover h3 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin: 8px auto;
+  text-transform: uppercase;
+}
+
+.cover h6 {
+  font-size: 18px;
+  padding: 1px 8px;
+}
+
+.delimg {
+  width: 32px;
+  height: 30px;
+}
+
+.del {
+  height: 40px;
+  background: limegreen;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  place-self: end;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mainButtons button img,
+.add img,
+.fluid,.clo {
+  height: 60px;
+  width: 60px;
+}
+
+.closeNom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+}
+
+.see {
+  transform: rotate(0.4turn);
+}
+
+.aller {
+  width: min(100%, 700px);
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  background: whitesmoke;
+}
+
+body {
+  background: #ccc;
+}
+
+@media screen and (min-width:750px) {
+
+  .container {
+    display: grid;
+
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px;
+  }
+
+  nav div span {
+    font-size: 30px;
+  }
+
+  nav img {
+    width: 35px;
+    height: 35px;
+  }
+
+  nav {
+    height: 45px;
+  }
+#search {
+  
+  font-size: 22px;
+}
+.div p {
+
+  padding-bottom: 22px;
+  font-size: 24px;
+}
+.div span{
+  font-size: 17px;
+}
+
+}
+.anims {
+  min-height: 600px;
+  min-width: 300px;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: block;
+}
+.anim {
+
+ height: 100px;
+ width: 100px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ margin: auto;
+ z-index: 100;
+}
+.anim1,.anim2,.anim3,.anim4 {
+  width: 5px;
+  height: 100px;
+  background-color: black;
+}
+.anim1 {
+  position: absolute;
+  animation: loader1 1s infinite;
+  -o-animation: loader1 1s infinite;
+}
+.anim2 {
+ position: absolute;
+ height: 5px;
+  width: 100px;
+  -o-animation: loader2 1s infinite;
+  animation: loader2 1s infinite;
+}
+.anim3 {
+ position: absolute;
+ height: 5px;
+  width: 100px;
+ bottom: 0;
+ -o-animation: loader3 1s infinite;
+ animation: loader3 1s infinite;
+}
+.anim4 {
+  position: absolute;
+ bottom: 100px;
+  right: 0;
+  animation: loader4 1s infinite;
+  -o-animation: loader4 1s infinite;
+}
+@keyframes loader1 {
+  from{
+   top:-100px;
+  }
+  to {
+   top:0px;
+  }
+}
+@keyframes loader2 {
+  from{
+   left:-100px;
+  }
+  to {
+   left:0px;
+  }
+}
+
+@keyframes loader3 {
+  from{
+   right:-100px;
+  }
+  to {
+   right:0px;
+  }
+}
+@keyframes loader4 {
+  from{
+   bottom:-100px;
+  }
+  to {
+   bottom:0px;
+  }
+}
+@-o-keyframes loader1 {
+  from{
+   top:-100px;
+  }
+  to {
+   top:0px;
+  }
+}
+@-o-keyframes loader2 {
+  from{
+   left:-100px;
+  }
+  to {
+   left:0px;
+  }
+}
+
+@-o-keyframes loader3 {
+  from{
+   right:-100px;
+  }
+  to {
+   right:0px;
+  }
+}
+@-o-keyframes loader4 {
+  from{
+   bottom:-100px;
+  }
+  to {
+   bottom:0px;
+  }
+}
+img:hover {
+ transform: rotate(360deg);
+ transition: 0.5s ease-out;
+ 
+}
+.banner {
+  height: 40%;
+  min-height: 200px;
+ width: 85%;
+ min-width: 300px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ margin: auto;
+ z-index: 100;
+ background: white;
+ padding: 9px 13px;
+ border-radius: 5px ;
+ box-shadow: 0 0 3px rgba(10, 10, 10, 0.2);
+ display: none;
+}
+.closeBan {
+  background: white;
+  border: none;
+  outline: none;
+}
+.banner p{ 
+  font-size: 24px;
+  padding: 18px 4px;
+  margin-top: 45px;
+  text-transform: uppercase;
+}
