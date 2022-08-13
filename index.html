@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <script src="https://kit.fontawesome.com/6348bc0d65.js" crossorigin="anonymous"></script>
+</head>
+
+<body >
+  <div class="pins">
+
+     <div class="pinBody">
+       <div class="down">
+         <div class="modal-menu">
+           <div class="menu1" onclick="showIt()">
+             <img class="modal-img" src="reset (1).svg" alt="" />
+             <p>reset <br />password</p>
+           </div>
+           <div class="menu2">
+             <img class="modal-img" src="padlock.svg" alt="" />
+             <p> Change <br /> Password</p>
+           </div>
+         </div>
+         <div class="close-down">
+           <p><i class="fas fa-chevron-down"></i></p>
+         </div>
+    
+       </div>
+       <div class="pinInput">
+         <input type="text" name="" id="pin" value="" readonly />
+       </div>
+       <div class="number">
+         <input type="button" name="number1" class="numbers" value="1" />
+         <input type="button" name="number2" class="numbers" value="2" />
+         <input type="button" name="number3" class="numbers" value="3" />
+         <input type="button" name="number4" class="numbers" value="4" />
+         <input type="button" name="number6" class="numbers" value="5" />
+         <input type="button" name="number1" class="numbers" value="6" />
+         <input type="button" name="number1" class="numbers" value="7" />
+         <input type="button" name="number1" class="numbers" value="8" />
+         <input type="button" name="number1" class="numbers" value="9" />
+         <button type="button" name="number1" class="numbers" id="delete"><i class="fas fa-backspace"></i></button>
+         <input type="button" name="number1" class="numbers" value="0" />
+         <button type="button" name="number1" class="number" id="submit"><i class="fas fa-check"></i></button>
+       </div>
+       <div class="modalBox">
+         <p class="modal-icon"><i class="fas fa-window-close"></i></p>
+         <p class="modal-text"> The default pin is "1234" </p>
+       </div>
+   <div class="modal-show">
+     <div class="showCon">
+       
+    
+    <p onclick="closeShow()" class="one"><i class="fas fa-window-close"></i></p>
+ <p class="two">Reset to default password "1234"
+ <br />
+ Clear all the notes
+ </p>
+ <button onclick="resetIt()">RESET</button>
+  </div>
+   </div> 
+       <!--password-->
+       <main class="passwordBody">
+         <div class="closePass">
+           <p class="pass-icon"><i class="fas fa-window-close"></i></p>
+         </div>
+         <div class="pinInput2">
+           <input type="text" name="" id="password" value="" readonly />
+         </div>
+         <div class="guide">
+           <p class="guideP"></p>
+         </div>
+         <div class="number2">
+           <input type="button" name="number1" class="numbers2" value="1" />
+           <input type="button" name="number2" class="numbers2" value="2" />
+           <input type="button" name="number3" class="numbers2" value="3" />
+           <input type="button" name="number4" class="numbers2" value="4" />
+           <input type="button" name="number6" class="numbers2" value="5" />
+           <input type="button" name="number1" class="numbers2" value="6" />
+           <input type="button" name="number1" class="numbers2" value="7" />
+           <input type="button" name="number1" class="numbers2" value="8" />
+           <input type="button" name="number1" class="numbers2" value="9" />
+           <button type="button" name="number1" class="numbers2" id="delete2"><i class="fas fa-backspace"></i></button>
+           <input type="button" name="number1" class="numbers2" value="0" />
+           <button type="button" name="number1" class="numbers2" id="submit2"> <i class="fas fa-check"></i></button>
+         </div>
+       </main>
+     </div> 
+  </div>
+  <div class="bodice">
+    
+  
+<div class="name">
+  <p>NOTELLA</p>
+  <hr />
+</div>
+
+<div class="grid">
+ 
+</div>
+<div class="note">
+  <div class="noteTab">
+    <button class="noteTab1">Cancel</button>
+ <button class="noteTab2" id="button">Save</button>
+  </div>
+  <textarea type="text" name="notes" id="notes" value="" autofocus> </textarea>
+
+</div>
+
+  
+
+
+<div class="openUp" ><i class="fas fa-plus"></i></div>
+
+ 
+</div>
+<script src="main.js" type="text/javascript" charset="utf-8"></script>
+ 
+</body>
+
+</html>
